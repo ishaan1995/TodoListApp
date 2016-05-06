@@ -211,14 +211,23 @@ public class AddToList extends AppCompatActivity implements
                                 //use if current time is selected by user or time is less than 1 min
                                 if (calendar.getTimeInMillis() == setUser.getTimeInMillis()
                                         || Math.abs(calendar.getTimeInMillis() - setUser.getTimeInMillis()) <= 60000) {
-                                    Toast.makeText(AddToList.this, "here after 10 sec!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(AddToList.this, "Will be displayed after 10 sec!", Toast.LENGTH_SHORT).show();
                                     calendar.add(Calendar.SECOND, 10);
                                     AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
                                     alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
                                 } else {
+                                    //set notification 15 mins prior to time;
+                                    int prior =1000*60*15;
                                     Log.d(TAG, "usertime :" + setUser.getTimeInMillis());
-                                    AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-                                    alarmManager.set(AlarmManager.RTC_WAKEUP, setUser.getTimeInMillis(), pendingIntent);
+                                    if (setUser.getTimeInMillis()-prior>=calendar.getTimeInMillis()){
+                                        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                                        alarmManager.set(AlarmManager.RTC_WAKEUP, setUser.getTimeInMillis()-prior, pendingIntent);
+                                    }else {
+                                        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                                        alarmManager.set(AlarmManager.RTC_WAKEUP, setUser.getTimeInMillis(), pendingIntent);
+                                    }
+
+
                                 }
                                 Intent intent = new Intent(AddToList.this, MainActivity.class);
 

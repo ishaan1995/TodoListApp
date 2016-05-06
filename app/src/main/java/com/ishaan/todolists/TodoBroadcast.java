@@ -22,7 +22,7 @@ public class TodoBroadcast extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        Toast.makeText(context, "Here", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, "Here", Toast.LENGTH_SHORT).show();
         Boolean b = intent.getExtras().getBoolean("flag");
         String msg =intent.getExtras().getString("todoitem");
         String place =intent.getExtras().getString("place");
@@ -35,7 +35,7 @@ public class TodoBroadcast extends BroadcastReceiver {
             Intent i = new Intent(context,TodoService.class);
             context.stopService(i);
 
-            Toast.makeText(context, "Service stopped!!", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(context, "Service stopped!!", Toast.LENGTH_SHORT).show();
         }else{
             Intent i = new Intent(context,TodoService.class);
             context.stopService(i);//close previous service
@@ -48,9 +48,10 @@ public class TodoBroadcast extends BroadcastReceiver {
             pendingIntent = PendingIntent.getService(context, 0, myIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             Calendar calendar = Calendar.getInstance();
             calendar.setTimeInMillis(System.currentTimeMillis());
-
+            //snooze notification till 30 mins
+            calendar.add(Calendar.MINUTE,30);
             calendar.add(Calendar.SECOND, 10);
-            calendar.add(Calendar.MINUTE,1);
+            //calendar.add(Calendar.MINUTE,1);
             AlarmManager alarmManager = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
             alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
         }

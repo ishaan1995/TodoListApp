@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="32dp"
+    android:id="@+id/parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="32dp"
+    tools:context="com.ishaan.todolists.Login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/inner"
+        android:background="@drawable/whitecurved"
+
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/logo_ic"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Todo  List  App"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="53dp"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/gsignup"
+            android:background="#fff"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="10dp"
+            android:text="Google Sign-In"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="86dp" />
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

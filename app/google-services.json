@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "996963989493",
+    "project_id": "final-dda04"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996963989493:android:28c49c5e4b385632",
+        "android_client_info": {
+          "package_name": "com.ishaan.todolists"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "996963989493-njo0n7bgicibsfvjj9r0tllab9ue9uij.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ishaan.todolists",
+            "certificate_hash": "5B2E11F9152D163BD34AB6EA4A41ED530F6A7295"
+          }
+        },
+        {
+          "client_id": "996963989493-p6rciefjr2v61v3i50j2cklsdolg4il2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG04dAcG2x_qjx5Jyw4b_GrvCzWjvfgTo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

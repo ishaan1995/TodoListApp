@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Todo Lists</string>
+    <string name="action_signout">Sign out</string>
+    <string name="title_activity_add_to_list">Add To List</string>
+</resources>

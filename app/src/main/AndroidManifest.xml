@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ishaan.todolists">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDG04dAcG2x_qjx5Jyw4b_GrvCzWjvfgTo"/>
+        <activity
+            android:name="com.ishaan.todolists.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="com.ishaan.todolists.AddToList"
+            android:label="@string/title_activity_add_to_list"
+            android:parentActivityName="com.ishaan.todolists.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ishaan.todolists.MainActivity" />
+        </activity>
+        <activity android:name="com.ishaan.todolists.Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.ishaan.todolists.TodoService"
+            android:enabled="true" />
+
+        <receiver android:name="com.ishaan.todolists.TodoBroadcast"
+            android:enabled="true"
+            />
+    </application>
+
+</manifest>

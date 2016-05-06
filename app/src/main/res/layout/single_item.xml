@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:id="@+id/relativeLayout"
+    android:background="@drawable/box"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="15dp"
+        android:padding="5dp"
+        android:id="@+id/item"
+        android:text="Here will come the msg"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_location_on_black_24dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/place"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/loc"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Place to visit"
+        android:textSize="17sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/place"
+        android:layout_below="@+id/item"
+        android:layout_toRightOf="@+id/loc"
+        android:layout_toEndOf="@+id/loc" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="16sp"
+        android:text="15-05-16 13:34"
+        android:textColor="#000"
+        android:id="@+id/duetime"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/place"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+</RelativeLayout>
